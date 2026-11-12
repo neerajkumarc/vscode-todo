@@ -1,5 +1,5 @@
 {
-  "name": "daily-todo",
+  "name": "vscode-todo",
   "displayName": "Daily Todo",
   "description": "A minimalist daily task manager with Kanban and List views inside VS Code.",
   "publisher": "neerajkumarc",
@@ -24,11 +24,8 @@
     "todo",
     "kanban",
     "daily",
-    "tasks",
-    "planner",
-    "productivity",
-    "checklist"
-  ],
+    "tasks"
+    ],
   "main": "./dist/extension.js",
   "activationEvents": [
     "onCommand:todo.open"
