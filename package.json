@@ -1,7 +1,7 @@
 {
   "name": "todolist-kanban",
   "displayName": "Daily Todo",
-  "description": "A minimalist daily task manager with Kanban and List views inside VS Code.",
+  "description": "A daily task manager with Kanban and List views.",
   "publisher": "neerajkumarc",
   "version": "1.0.0",
   "license": "MIT",
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/neerajkumarc/vscode-todo/issues"
   },
-  "homepage": "https://github.com/neerajkumarc/vscode-todo#readme",
+  "homepage": "https://github.com/neerajkumarc/vscode-todo",
   "categories": [
     "Other"
   ],
@@ -25,7 +25,7 @@
     "kanban",
     "daily",
     "tasks"
-    ],
+  ],
   "main": "./dist/extension.js",
   "activationEvents": [
     "onCommand:todo.open"
@@ -42,7 +42,6 @@
       "editor/title": [
         {
           "command": "todo.open",
-          "when": "true",
           "group": "navigation"
         }
       ]

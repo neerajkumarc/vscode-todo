@@ -1,10 +1,10 @@
 # Daily Todo
 
-A lightweight daily task manager with Kanban and List views inside VS Code.
+A lightweight daily task manager with Kanban and List views.
 
 ---
 
-Daily Todo keeps your tasks organized day by day directly in your editor. It provides both a 3-column Kanban board and a simple checklist for the same set of tasks, persisted across restarts using VS Code's native global state.
+Daily Todo keeps your tasks organized day by day directly in your editor. It provides both a 3-column Kanban board and a simple checklist for the same set of tasks, persisted across restarts using editor global state.
 
 ## Getting Started
 
@@ -49,7 +49,7 @@ Example output:
 ```
 
 ### Native theming
-The UI styles strictly with VS Code CSS variables (`--vscode-*`), adapting automatically to light, dark, and high-contrast themes. No external runtime frameworks or webview dependencies are used.
+The UI styles strictly with editor CSS variables (`--vscode-*`), adapting automatically to light, dark, and high-contrast themes. No external runtime frameworks or webview dependencies are used.
 
 ## Keyboard Shortcuts
 
@@ -81,7 +81,7 @@ npm run watch
 npm run package
 ```
 
-Press `F5` in VS Code to open an Extension Development Host with the extension loaded for testing.
+Press `F5` to open an Extension Development Host with the extension loaded for testing.
 
 ## License
 
