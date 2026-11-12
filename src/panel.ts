@@ -1,4 +1,3 @@
-import { randomBytes } from 'node:crypto';
 import * as vscode from 'vscode';
 import {
   MAX_BATCH_SIZE,
@@ -169,7 +168,7 @@ export class TodoPanel {
       vscode.Uri.joinPath(root, 'index.html'),
     );
     const webview = this.panel.webview;
-    const nonce = randomBytes(16).toString('hex');
+    const nonce = getNonce();
     const assetUri = (file: string) =>
       webview.asWebviewUri(vscode.Uri.joinPath(root, file)).toString();
 
@@ -212,4 +211,13 @@ function matchesFilter(todo: Todo, filter: CopyFilter): boolean {
 
 function sanitizeTitle(title: string): string {
   return title.replace(/[\u0000-\u001f\u007f-\u009f\u2028\u2029]+/g, ' ').trim();
+}
+
+function getNonce(): string {
+  let text = '';
+  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  for (let i = 0; i < 32; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return text;
 }

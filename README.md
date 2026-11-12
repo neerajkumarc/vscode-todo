@@ -8,11 +8,6 @@
   A lightweight daily task manager with Kanban and List views inside VS Code.
 </p>
 
-<p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=neerajkumarc.vscode-daily-todo"><img src="https://img.shields.io/badge/VS%20Code%20Marketplace-v1.0.0-blue?style=flat-square" alt="VS Code Marketplace"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License: MIT"></a>
-</p>
-
 ---
 
 Daily Todo keeps your tasks organized day by day directly in your editor. It provides both a 3-column Kanban board and a simple checklist for the same set of tasks, persisted across restarts using VS Code's native global state.
