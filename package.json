@@ -1,5 +1,5 @@
 {
-  "name": "daily-todo",
+  "name": "todolist-kanban",
   "displayName": "Daily Todo",
   "description": "A minimalist daily task manager with Kanban and List views inside VS Code.",
   "publisher": "neerajkumarc",
