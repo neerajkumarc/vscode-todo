@@ -1,0 +1,10 @@
+.vscode/**
+.gitignore
+.DS_Store
+src/**
+webview/**
+esbuild.mjs
+tsconfig.json
+AGENTS.md
+*.vsix
+media/*.svg

@@ -1,0 +1,68 @@
+{
+  "name": "vscode-daily-todo",
+  "displayName": "Daily Todo",
+  "description": "A minimalist daily task manager with Kanban and List views inside VS Code.",
+  "publisher": "neerajkumarc",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neerajkumarc/vscode-todo"
+  },
+  "bugs": {
+    "url": "https://github.com/neerajkumarc/vscode-todo/issues"
+  },
+  "homepage": "https://github.com/neerajkumarc/vscode-todo#readme",
+  "categories": [
+    "Productivity"
+  ],
+  "keywords": [
+    "todo",
+    "kanban",
+    "daily",
+    "tasks",
+    "planner",
+    "productivity",
+    "checklist"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:todo.open"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "todo.open",
+        "title": "Daily Todo",
+        "icon": "$(checklist)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "todo.open",
+          "when": "true",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc --noEmit && node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "vscode:prepublish": "npm run build",
+    "package": "vsce package --no-rewrite-relative-links",
+    "publish": "vsce publish --no-rewrite-relative-links"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^4.1.0",
+    "esbuild": "^0.28.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src {{cspSource}}; script-src 'nonce-{{nonce}}'; img-src {{cspSource}} data:; font-src {{cspSource}};"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{styleUri}}" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <header class="header">
+      <input id="date" type="date" aria-label="Date" />
+      <div class="header-controls">
+        <details id="copy" class="copy-menu">
+          <summary id="copy-summary" aria-haspopup="true">Copy</summary>
+          <div class="copy-items">
+            <button type="button" data-filter="all">Copy all</button>
+            <button type="button" data-filter="done">Copy done</button>
+            <button type="button" data-filter="undone">Copy undone</button>
+          </div>
+        </details>
+        <select id="view" aria-label="View">
+          <option value="kanban">Kanban</option>
+          <option value="list">List</option>
+        </select>
+      </div>
+    </header>
+    <main id="content" class="content" aria-label="Todos"></main>
+    <div id="live" class="sr-only" aria-live="polite"></div>
+    <div id="add-hint" class="sr-only">
+      Press Enter to add. Shift+Enter for a new line. Paste a list to add multiple tasks.
+    </div>
+    <script nonce="{{nonce}}" src="{{scriptUri}}"></script>
+  </body>
+</html>
