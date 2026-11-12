@@ -1,12 +1,6 @@
 # Daily Todo
 
-<p align="center">
-  <img src="media/icon.png" width="128" height="128" alt="Daily Todo Icon" />
-</p>
-
-<p align="center">
-  A lightweight daily task manager with Kanban and List views inside VS Code.
-</p>
+A lightweight daily task manager with Kanban and List views inside VS Code.
 
 ---
 

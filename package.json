@@ -30,6 +30,9 @@
     "checklist"
   ],
   "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:todo.open"
+  ],
   "contributes": {
     "commands": [
       {
@@ -52,8 +55,8 @@
     "build": "tsc --noEmit && node esbuild.mjs",
     "watch": "node esbuild.mjs --watch",
     "vscode:prepublish": "npm run build",
-    "package": "vsce package --no-rewrite-relative-links",
-    "publish": "vsce publish --no-rewrite-relative-links"
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
