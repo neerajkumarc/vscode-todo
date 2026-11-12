@@ -173,8 +173,8 @@ export class TodoPanel {
     const assetUri = (file: string) =>
       webview.asWebviewUri(vscode.Uri.joinPath(root, file)).toString();
 
-    webview.html = Buffer.from(source)
-      .toString('utf8')
+    webview.html = new TextDecoder()
+      .decode(source)
       .replaceAll('{{cspSource}}', webview.cspSource)
       .replaceAll('{{nonce}}', nonce)
       .replaceAll('{{styleUri}}', assetUri('style.css'))

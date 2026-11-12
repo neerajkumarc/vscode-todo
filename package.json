@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/neerajkumarc/vscode-todo#readme",
   "categories": [
-    "Productivity"
+    "Other"
   ],
   "keywords": [
     "todo",
@@ -30,9 +30,6 @@
     "checklist"
   ],
   "main": "./dist/extension.js",
-  "activationEvents": [
-    "onCommand:todo.open"
-  ],
   "contributes": {
     "commands": [
       {
